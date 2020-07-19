@@ -1,0 +1,5 @@
+url: 'https://ariannaventrelli.it'
+baseurl: ''
+exclude: ['Readme.txt']
+permalink: pretty
+title: 'Dott.ssa Arianna Ventrelli'
