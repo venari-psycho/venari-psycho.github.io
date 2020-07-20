@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  {% include google-tag-manager-script.html %}
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>{% if page.title %}{{ page.title }} {% else %} {{ site.title | escape }}{% endif %}</title>
@@ -39,6 +40,7 @@
 </head>
 
 <body>
+  {% include google-tag-manager-no-script.html %}
 
   {% include header.html %}
 
@@ -63,7 +65,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  
+  {% include google-analytics.html %}
 </body>
 
 </html>
