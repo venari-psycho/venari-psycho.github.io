@@ -1304,3 +1304,7 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+
+#footer .copyright {
+  font-size: 0.8em;
+}
