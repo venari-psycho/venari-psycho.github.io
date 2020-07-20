@@ -1296,15 +1296,19 @@ section {
   text-align: center;
 }
 
-#footer .credits {
+.sub-footer-strip {
+  background: #dddbd7;
+}
+
+.sub-footer-strip .credits {
   padding-top: 5px;
   font-size: 10px;
 }
 
-#footer .credits a {
+.sub-footer-strip .credits a {
   color: #34b7a7;
 }
 
-#footer .copyright {
+.sub-footer-strip .copyright {
   font-size: 0.8em;
 }
