@@ -17,15 +17,6 @@
           <p>
             Psicoterapeuta, specializzata in Psicoterapia Cognitivo-Comportamentale (CBT) presso l'APC/SPC di Roma.
           </p>
-          <!--
-            <p>
-              Da anni collabora con l'Università degli Studi "Guglielmo Marconi" nel campo della Psicopatologia e del disagio emotivo.
-            </p>
-            <p>
-              Dal 2018 lavora come psicoterapeuta nelle aree di intervento clinico quali disturbi d'ansia, disturbo ossessivo-compulsivo, attacchi di panico,
-              fobie specifiche, ansia sociale, depressione, disturbi del comportamento alimentare, autostima e problematiche legate allo stress.
-            </p>
-          -->
         </div>
         <!-- Grid column -->
 
@@ -73,16 +64,16 @@
           <h5 class="font-weight-bold text-uppercase mb-4">Contatti</h5>
           <ul class="list-unstyled">
             <li>
-              <p><i class="icofont-google-map"></i> via degli Anemoni, 8 - 00172 Roma</p>
+              <p><i class="icofont-google-map"></i> {{ site.data.contact.address }}</p>
             </li>
             <li>
-              <p><i class="icofont-google-map"></i> via Livia Drusilla, 19 - 00175 Roma</p>
+              <p><i class="icofont-google-map"></i> {{ site.data.contact.secondaryAddress }}</p>
             </li>
             <li>
-              <p><i class="icofont-envelope"></i> arianna.ventrelli@psypec.it</p>
+              <p><i class="icofont-envelope"></i> {{ site.data.contact.email }}</p>
             </li>
             <li>
-              <p><i class="icofont-phone"></i> 39 333 7788681</p>
+              <p><i class="icofont-phone"></i> {{ site.data.contact.phone }}</p>
             </li>
           </ul>
         </div>
