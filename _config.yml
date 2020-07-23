@@ -1,6 +1,6 @@
 url: 'https://ariannaventrelli.it'
 baseurl: ''
-exclude: ['Readme.txt']
+exclude: ['Readme.txt', 'av-qr-code.py']
 title: 'Dott.ssa Arianna Ventrelli'
 
 plugins:
