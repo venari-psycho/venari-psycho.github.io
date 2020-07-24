@@ -494,6 +494,10 @@ section {
   padding: 60px 0;
 }
 
+section.cookie-policy-section {
+  padding: 10px 0;
+}
+
 .section-bg {
   background-color: #e7f8f6;
 }
