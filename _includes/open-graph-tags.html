@@ -32,6 +32,13 @@
 
 {% if page.image %}
 <meta property="og:image" content="{{ site.url }}/assets/img/posts/{{ page.image }}">
+{% else %}
+<meta property="og:image" content="{{ site.url }}{{ site.cover_image }}">
+<meta property="og:image:url" content="{{ site.url }}{{ site.cover_image }}" />
+<meta property="twitter:image" content="{{ site.url }}{{ site.cover_image }}"  />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 {% endif %}
 
 {% if page.categories %}
