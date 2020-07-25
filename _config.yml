@@ -1,6 +1,8 @@
 url: 'https://ariannaventrelli.it'
 baseurl: ''
+locale: 'it_IT'
 exclude: ['Readme.txt', 'av-qr-code.py']
+
 title: 'Dott.ssa Arianna Ventrelli'
 description: 'Dott.ssa Arianna Ventrelli psicologa psicoterapeuta cognitivo-comportamentale a Roma, Centocelle, Tuscolano, si occupa di disturbi alimentari, anoressia, bulimia, sostegno alla genitorialit&agrave;, rapporti genitori figli, disturbi psicologici e disagi familiari, psicoterapia per l''individuo e di coppia, consulenza rapporto genitori figli.'
 
