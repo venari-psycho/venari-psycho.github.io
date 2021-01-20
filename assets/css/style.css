@@ -1176,11 +1176,19 @@ section.cookie-policy-section {
   color: #555555;
 }
 
-.contact .info .email, .contact .info .phone, .contact .info .address-secondary {
-  margin-top: 40px;
+.contact .info .email, .contact .info .phone, .contact .info .piva {
+  margin-top: 2.5em;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .address-secondary:hover i, .contact .info .phone:hover i {
+.contact .info .piva {
+  margin-bottom: 2.5em;
+}
+
+.contact .info .receive-hour {
+  padding-bottom: 1.5em;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .piva:hover i, .contact .info .phone:hover i {
   background: #34b7a7;
   color: #fff;
 }
