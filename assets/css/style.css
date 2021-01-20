@@ -757,6 +757,7 @@ section.cookie-policy-section {
   margin-top: -2px;
   border-left: 2px solid #34b7a7;
   position: relative;
+  overflow: hidden;
 }
 
 .resume .resume-item h4 {
@@ -800,6 +801,15 @@ section.cookie-policy-section {
   top: 0;
   background: #fff;
   border: 2px solid #34b7a7;
+}
+
+@media (max-width: 575.98px) {
+  .resume .resume-item .badge-info-truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 25em;
+  }
 }
 
 /*--------------------------------------------------------------
