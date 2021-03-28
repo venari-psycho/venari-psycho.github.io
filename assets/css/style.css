@@ -939,18 +939,16 @@ section.cookie-policy-section {
   fill: #11dbcf;
 }
 
-/*
-.services .iconbox-green i {
-  color: #11db6c;
+.services .iconbox-light-green i {
+  color: #11dbcf;
 }
 
-.services .iconbox-green:hover .icon i {
+.services .iconbox-light-green:hover .icon i {
   color: #fff;
 }
-*/
 
-.services .iconbox-green:hover .icon path {
-  fill: #0fc53df1;
+.services .iconbox-light-green:hover .icon path {
+  fill: #99ffcc;
 }
 
 .services .iconbox-purple i {
@@ -963,6 +961,19 @@ section.cookie-policy-section {
 
 .services .iconbox-purple:hover .icon path {
   fill: #c772e9;
+}
+
+
+.services .iconbox-green i {
+  color: #11db6c;
+}
+
+.services .iconbox-green:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-green:hover .icon path {
+  fill: #0fc53df1;
 }
 
 /*--------------------------------------------------------------
@@ -1342,10 +1353,10 @@ section.cookie-policy-section {
 #share-buttons:after {content: ""; display: block; clear: both;}
 #share-buttons > div {
     position: relative;
-    text-align: left; 
-    height: 36px; 
-    width: 32px; 
-    float: left; 
+    text-align: left;
+    height: 36px;
+    width: 32px;
+    float: left;
     text-align: center;
 }
 /*
