@@ -92,12 +92,14 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
-  // Back to top button
+  // Back to top button and icon-scroll (only in home)
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
+      $('.icon-scroll').fadeOut('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
+      $('.icon-scroll').fadeIn('slow');
     }
   });
 
