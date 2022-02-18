@@ -827,6 +827,29 @@ section.cookie-policy-section {
   color: #34b7a7;
 }
 
+.resume .resume-item .job-center-name {
+  font-size: 1.4rem;
+}
+
+.resume .resume-item .job-center-description {
+  font-size: 0.9rem;
+  font-style: italic;
+  padding-bottom: 0.4rem;
+}
+
+.resume .resume-item .job-center-location {
+  font-size: 0.8rem;
+}
+
+.resume .resume-item .job-content {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.resume .resume-item .job-footer {
+  margin-top: 1rem;
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
