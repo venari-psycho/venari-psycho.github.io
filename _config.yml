@@ -9,3 +9,11 @@ cover_image: '/assets/img/cover-image.png'
 
 plugins:
   - jekyll-environment-variables
+  - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path:            "assets/**"
+    values:
+      sitemap:         false
