@@ -280,9 +280,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll
   jekyll-environment-variables
-  jekyll-sitemap
 
 BUNDLED WITH
    2.1.4
