@@ -5,6 +5,9 @@
         
         <!-- Copyright -->
         <div class="copyright">
+          {% if site.data.google.google_analytics_id %}
+            {{ site.data.version.release }},
+          {% endif %}
           &copy; Copyright 2020 <strong><span>{{ site.data.contact.businessName }}</span></strong>. Tutti i diritti riservati.
         </div>
         <!-- End Copyright -->
