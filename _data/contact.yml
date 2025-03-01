@@ -2,8 +2,10 @@ email: 'arianna.ventrelli@psypec.it'
 phone: '+39 333 7788681'
 numero_albo_psicologi: '22872'
 businessName: 'Dott.ssa Arianna Ventrelli'
-address: 'via Filippo Smaldone, 73 - 00171 Roma'
-address_short: 'via Filippo Smaldone, 73 - Roma'
+primary_address: 'via Filippo Smaldone, 73 - 00171 Roma'
+secondary_address: 'v.le Castro Pretorio, 116 - 00185 Roma'
+primary_address_short: 'via Filippo Smaldone, 73 - Roma'
+secondary_address_short: 'v.le Castro Pretorio, 116 - Roma'
 piva: '15964381006'
 city: Roma
 website: ariannaventrelli.it

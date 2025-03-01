@@ -16,8 +16,13 @@ layout: default
       </div>
 
       <!-- Google Map -->
-      <div>
-	<iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.9408708267047!2d12.557531931599046!3d41.89412871275899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f624e79f0a12f%3A0xbf2fac7287037c4f!2sVia%20Filippo%20Smaldone%2C%2073%2C%2000171%20Roma%20RM!5e0!3m2!1sit!2sit!4v1669663428731!5m2!1sit!2sit" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="row">
+        <div class="col-lg-6">
+          <iframe id="map-canvas-1" style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.9408708267047!2d12.557531931599046!3d41.89412871275899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f624e79f0a12f%3A0xbf2fac7287037c4f!2sVia%20Filippo%20Smaldone%2C%2073%2C%2000171%20Roma%20RM!5e0!3m2!1sit!2sit!4v1669663428731!5m2!1sit!2sit" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-lg-6">
+          <iframe id="map-canvas-2" style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=it&amp;q=Viale Castro Pretorio, 116 00185 Roma&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
       <!-- End Google Map -->
       
@@ -25,10 +30,17 @@ layout: default
 
         <div class="col-lg-4">
           <div class="info">
+
             <div class="address">
               <i class="icofont-google-map"></i>
               <h4>Indirizzo:</h4>
-              <p>{{ site.data.contact.address }}</p>
+              <p>{{ site.data.contact.primary_address }}</p>
+            </div>
+
+            <div class="secondary-address">
+              <i class="icofont-google-map"></i>
+              <h4>Indirizzo:</h4>
+              <p>{{ site.data.contact.secondary_address }}</p>
             </div>
 
             <div class="email">
@@ -41,12 +53,6 @@ layout: default
               <i class="icofont-phone"></i>
               <h4>Telefono:</h4>
               <p>{{ site.data.contact.phone }}</p>
-            </div>
-
-            <div class="piva">
-              <i class="icofont-bag-alt"></i>
-              <h4>P. IVA:</h4>
-              <p>{{ site.data.contact.piva }}</p>
             </div>
           </div>
         </div>
