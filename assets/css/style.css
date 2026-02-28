@@ -1326,6 +1326,12 @@ section.cookie-policy-section {
   padding-bottom: 1.5em;
 }
 
+@media (max-width: 991px) {
+  .contact .info .receive-hour {
+    margin-top: 2.5em;
+  }
+}
+
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .piva:hover i, .contact .info .phone:hover i, .contact .info .receive-hour:hover i {
   background: #34b7a7;
   color: #fff;
