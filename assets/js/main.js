@@ -154,19 +154,4 @@
     offset: '80%'
   });
 
-  // Init AOS
-  function aos_init() {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      // Rispetta l'impostazione di sistema "riduci il movimento".
-      disable: function() {
-        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      }
-    });
-  }
-  $(window).on('load', function() {
-    aos_init();
-  });
-
 })(jQuery);

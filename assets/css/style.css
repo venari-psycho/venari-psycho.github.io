@@ -37,6 +37,11 @@
   --z-mobile-nav: 400;
   --z-back-to-top: 500;
   --z-skip-link: 600;
+
+  /* Curve del movimento. Quelle native sono troppo deboli per leggersi.
+     In ingresso si usa sempre ease-out: parte veloce, quindi risponde. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /*--------------------------------------------------------------
@@ -152,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   background: var(--brand-ink);
   color: #fff;
-  transition: all 0.4s;
+  transition: background-color 200ms var(--ease-out);
 }
 
 .back-to-top i:hover {
@@ -221,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: var(--ink-muted);
-  transition: 0.3s;
+  transition: color 200ms var(--ease-out);
   font-size: 18px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -230,19 +235,18 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu > ul > li > a:before {
   content: "";
   position: absolute;
-  width: 0;
+  width: 25px;
   height: 2px;
   bottom: -5px;
   left: 0;
   background-color: var(--brand);
-  visibility: hidden;
-  width: 0px;
-  transition: all 0.3s ease-in-out 0s;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 250ms var(--ease-out);
 }
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
-  visibility: visible;
-  width: 25px;
+  transform: scaleX(1);
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -258,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
   background: none;
   font-size: 24px;
-  transition: all 0.4s;
+  transition: color 200ms var(--ease-out);
   line-height: 1;
   cursor: pointer;
   text-align: right;
@@ -290,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: var(--z-mobile-nav);
   overflow-y: auto;
   background: #fff;
-  transition: ease-in-out 0.2s;
+  transition: opacity 250ms var(--ease-out), visibility 250ms var(--ease-out);
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
@@ -326,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(9, 9, 9, 0.6);
   overflow: hidden;
   display: none;
-  transition: ease-in-out 0.2s;
+  transition: opacity 250ms var(--ease-out);
 }
 
 .mobile-nav-active {
@@ -451,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: background-color 0.4s;
+  transition: background-color 200ms var(--ease-out);
 }
 
 .btn-pill:hover,
@@ -463,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-pill .svg-icon {
   font-size: 1.25em;
-  transition: transform 0.3s;
+  transition: transform 250ms var(--ease-out);
 }
 
 .btn-pill:hover .svg-icon-arrow-right {
@@ -596,7 +600,7 @@ section.cookie-policy-section {
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: .9s;
+  transition: width 700ms var(--ease-out);
   background-color: var(--brand);
 }
 
@@ -711,7 +715,7 @@ section.cookie-policy-section {
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
+  transition: box-shadow 250ms var(--ease-out);
   background: #fff;
   box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 30%);
 }
@@ -728,12 +732,12 @@ section.cookie-policy-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  transition: color 250ms var(--ease-out);
   position: relative;
 }
 
 .services .icon-box .icon i {
-  transition: 0.5s;
+  transition: color 250ms var(--ease-out);
   position: relative;
 }
 
@@ -744,7 +748,7 @@ section.cookie-policy-section {
 }
 
 .services .icon-box .icon svg path {
-  transition: 0.5s;
+  transition: fill 250ms var(--ease-out);
   fill: #f5f5f5;
 }
 
@@ -758,7 +762,7 @@ section.cookie-policy-section {
 
 .services .icon-box h4 a {
   color: var(--ink);
-  transition: ease-in-out 0.3s;
+  transition: color 200ms var(--ease-out);
 }
 
 /* PANIK WIP FONT REFACTOR */
@@ -895,7 +899,7 @@ section.cookie-policy-section {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out);
 }
 
 .contact .info h4 {
@@ -1066,7 +1070,7 @@ iframe:focus-visible {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   border-radius: 0 0 4px 4px;
-  transition: transform 0.2s ease-out;
+  transition: transform 200ms var(--ease-out);
 }
 
 .skip-link:focus {
@@ -1075,36 +1079,109 @@ iframe:focus-visible {
 }
 
 /*--------------------------------------------------------------
-# Contenuto visibile senza JavaScript
-# AOS nasconde ogni [data-aos] via CSS: lo si lascia fare solo
-# quando AOS ha davvero inizializzato (classe .aos-init).
+# Movimento di pagina
+# Due cose, entrambe in CSS e senza JavaScript: la continuità fra
+# una pagina e l'altra, e l'ingresso del contenuto al caricamento.
 --------------------------------------------------------------*/
-[data-aos^="fade"][data-aos^="fade"]:not(.aos-init),
-[data-aos^="zoom"][data-aos^="zoom"]:not(.aos-init) {
-  opacity: 1;
-  transform: none;
+
+/* Dissolvenza incrociata fra documenti dello stesso sito. Dove non è
+   supportata la navigazione resta quella normale: nulla da gestire. */
+@view-transition {
+  navigation: auto;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 250ms;
+  animation-timing-function: var(--ease-out);
+}
+
+/* Header e logo non partecipano alla dissolvenza: restano fermi mentre
+   il resto cambia, ed è questo a far percepire la navigazione come
+   continua invece che come un taglio. */
+#header {
+  view-transition-name: site-header;
+}
+
+.mobile-nav-toggle {
+  view-transition-name: nav-toggle;
+}
+
+/* Ingresso del contenuto. Lo stato base è quello finale: se
+   l'animazione non parte, la pagina è comunque al suo posto. */
+@keyframes enter-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.enter {
+  animation: enter-rise 450ms var(--ease-out) both;
+}
+
+/* Home: si anima il blocco della hero, non #main. Un transform su un
+   antenato romperebbe il background-attachment: fixed dello sfondo. */
+#hero .container {
+  animation: enter-rise 450ms var(--ease-out) both;
+}
+
+/* Le card dei servizi sono una lista vera, quindi scaglionarle ha senso.
+   60ms l'una dall'altra: sotto i 30 non si legge, sopra gli 80 si aspetta. */
+.services .icon-box {
+  animation: enter-rise 450ms var(--ease-out) both;
+}
+
+.services .col-lg-4:nth-child(1) .icon-box { animation-delay: 0ms; }
+.services .col-lg-4:nth-child(2) .icon-box { animation-delay: 60ms; }
+.services .col-lg-4:nth-child(3) .icon-box { animation-delay: 120ms; }
+.services .col-lg-4:nth-child(4) .icon-box { animation-delay: 180ms; }
+.services .col-lg-4:nth-child(5) .icon-box { animation-delay: 240ms; }
+.services .col-lg-4:nth-child(6) .icon-box { animation-delay: 300ms; }
+.services .col-lg-4:nth-child(7) .icon-box { animation-delay: 360ms; }
+.services .col-lg-4:nth-child(8) .icon-box { animation-delay: 420ms; }
+.services .col-lg-4:nth-child(9) .icon-box { animation-delay: 480ms; }
 
 /*--------------------------------------------------------------
 # Movimento ridotto
 --------------------------------------------------------------*/
+/* Movimento ridotto non vuol dire immobile: si tolgono gli spostamenti,
+   si tengono le dissolvenze, che aiutano a capire cosa è cambiato. */
 @media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  /* Ridondante rispetto alla riga sopra, ma copre i browser che
+     ignorano @view-transition annidata in una media query. */
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transition-property: opacity, color, background-color, border-color !important;
+    transition-duration: 200ms !important;
+  }
+
+  .enter,
+  #hero .container,
+  .services .icon-box {
+    animation: enter-fade 200ms var(--ease-out) both;
+    animation-delay: 0ms !important;
+  }
+
+  @keyframes enter-fade {
+    from { opacity: 0; }
   }
 
   .icon-scroll {
     display: none;
-  }
-
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 
