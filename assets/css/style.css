@@ -24,6 +24,7 @@
 
   --surface: #ffffff;
   --surface-alt: #e9e8e6;      /* header, footer */
+  --surface-muted: #f3f3f3;    /* chip metadato, tracce delle barre */
   --surface-strip: #dddbd7;    /* sub-footer, 404 */
 
   --focus-ring: var(--brand-ink);
@@ -149,13 +150,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: var(--brand);
+  background: var(--brand-ink);
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: var(--brand-hover);
+  background: var(--brand-ink-hover);
   color: #fff;
 }
 
@@ -401,27 +402,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-#hero .btn-about {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
+#hero .btn-pill {
   margin-top: 30px;
-  color: #fff;
-  background: var(--brand);
-}
-
-#hero .btn-about:hover {
-  background: #3dc8b7;
 }
 
 @media (min-width: 1024px) {
@@ -448,6 +430,67 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
   }
+}
+
+/*--------------------------------------------------------------
+# Pulsanti
+# Un'unica forma per tutto il sito: la pillola già usata nella hero.
+--------------------------------------------------------------*/
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;        /* target tattile minimo */
+  padding: 14px 40px;
+  border-radius: 50px;
+  background: var(--brand-ink);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.4s;
+}
+
+.btn-pill:hover,
+.btn-pill:focus {
+  background: var(--brand-ink-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-pill .svg-icon {
+  font-size: 1.25em;
+  transition: transform 0.3s;
+}
+
+.btn-pill:hover .svg-icon-arrow-right {
+  transform: translateX(3px);
+}
+
+.btn-pill:hover .svg-icon-arrow-left {
+  transform: translateX(-3px);
+}
+
+/* Collegamento fra le due parti del resume.
+   I 60px sopra li mette già il padding della sezione: qui serve solo
+   lo stesso respiro sotto, prima del footer. `auto` sui lati perché
+   .container centra con margin auto e una scorciatoia `margin: x 0 y`
+   glieli azzererebbe. */
+.resume-nav {
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+/* Indicatore di posizione: informazione reale su un documento in due parti,
+   quindi testo leggibile e non un'etichettina maiuscola decorativa. */
+.resume-nav-position {
+  margin: 0 0 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: var(--ink-muted);
 }
 
 /*--------------------------------------------------------------
@@ -547,7 +590,7 @@ section.cookie-policy-section {
 }
 
 .skills .progress-bar-wrap {
-  background: #f3f3f3;
+  background: var(--surface-muted);
 }
 
 .skills .progress-bar {
@@ -618,11 +661,24 @@ section.cookie-policy-section {
 }
 
 .resume .resume-item .job-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 1rem;
 }
 
-.resume .resume-item .job-footer .badge-pill {
+/* Etichette tematiche: sono metadati, quindi stanno sullo sfondo.
+   Il teal resta al binario della timeline e alle date. */
+.resume-tag {
+  margin: 0;
+  padding: 5px 12px;
+  border-radius: 50px;
+  background: var(--surface-muted);
+  color: var(--ink-body);
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .resume .resume-item ul {
@@ -647,15 +703,6 @@ section.cookie-policy-section {
   top: 0;
   background: #fff;
   border: 2px solid var(--brand);
-}
-
-@media (max-width: 575.98px) {
-  .resume .resume-item .badge-info-truncated {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 25em;
-  }
 }
 
 /*--------------------------------------------------------------
