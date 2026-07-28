@@ -711,173 +711,76 @@ section.cookie-policy-section {
 
 /*--------------------------------------------------------------
 # Services
+# I servizi sono raggruppati per destinatario, non presentati come
+# nove riquadri di pari peso. Niente card: separano filetto e spazio.
 --------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: box-shadow 250ms var(--ease-out);
-  background: #fff;
-  box-shadow: 0px 5px 90px 0px rgb(110 123 131 / 30%);
+.service-group {
+  padding: 40px 0;
+  border-top: 1px solid var(--surface-muted);
 }
 
-.services .icon-box:hover {
-    border-color: #fff;
-    box-shadow: 0px 0 35px 0 rgb(0 0 0 / 8%);
+.service-group:first-of-type {
+  border-top: 0;
+  padding-top: 0;
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 250ms var(--ease-out);
-  position: relative;
+.service-group:last-of-type {
+  padding-bottom: 0;
 }
 
-.services .icon-box .icon i {
-  transition: color 250ms var(--ease-out);
-  position: relative;
-}
-
-.services .icon-box .icon svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.services .icon-box .icon svg path {
-  transition: fill 250ms var(--ease-out);
-  fill: #f5f5f5;
-}
-
-/* PANIK WIP FONT REFACTOR */
-.services .icon-box h4 {
-  font-family: "Montserrat", sans-serif;
+.service-group-title {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
   font-weight: 600;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
+  color: var(--brand-ink);
+  margin: 0 0 20px 0;
 }
 
-.services .icon-box h4 a {
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px 40px;
+}
+
+.service h4 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
   color: var(--ink);
-  transition: color 200ms var(--ease-out);
+  margin: 0 0 8px 0;
 }
 
-/* PANIK WIP FONT REFACTOR */
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
+.service h4 .svg-icon {
+  flex: none;
+  font-size: 20px;
+  color: var(--brand-ink);
+  /* le icone sono decorative: il nome del servizio le segue in chiaro */
+  align-self: center;
 }
 
-.services .iconbox-blue i {
-  color: #47aeff;
+.service p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-body);
+  max-width: 62ch;
 }
 
-.services .iconbox-blue:hover .icon i {
-  color: #fff;
-}
+/* Da tablet in su il destinatario esce dalla colonna dei servizi e li
+   introduce di lato: la struttura si legge prima di leggere i testi. */
+@media (min-width: 768px) {
+  .service-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 40px;
+  }
 
-.services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
-}
-
-.services .iconbox-orange i {
-  color: #ffa76e;
-}
-
-.services .iconbox-orange:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
-}
-
-.services .iconbox-pink i {
-  color: #e80368;
-}
-
-.services .iconbox-pink:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-pink:hover .icon path {
-  fill: #e80368;
-}
-
-.services .iconbox-yellow i {
-  color: #ffbb2c;
-}
-
-.services .iconbox-yellow:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
-}
-
-.services .iconbox-red i {
-  color: #ff5828;
-}
-
-.services .iconbox-red:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-red:hover .icon path {
-  fill: #ff5828;
-}
-
-.services .iconbox-teal i {
-  color: #11dbcf;
-}
-
-.services .iconbox-teal:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
-}
-
-.services .iconbox-light-green i {
-  color: #11dbcf;
-}
-
-.services .iconbox-light-green:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-light-green:hover .icon path {
-  fill: #99ffcc;
-}
-
-.services .iconbox-purple i {
-  color: #bf65e2;
-}
-
-.services .iconbox-purple:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-purple:hover .icon path {
-  fill: #c772e9;
-}
-
-.services .iconbox-green i {
-  color: #11db6c;
-}
-
-.services .iconbox-green:hover .icon i {
-  color: #fff;
-}
-
-.services .iconbox-green:hover .icon path {
-  fill: #0fc53df1;
+  .service-group-title {
+    margin: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1126,21 +1029,14 @@ iframe:focus-visible {
   animation: enter-rise 450ms var(--ease-out) both;
 }
 
-/* Le card dei servizi sono una lista vera, quindi scaglionarle ha senso.
-   60ms l'una dall'altra: sotto i 30 non si legge, sopra gli 80 si aspetta. */
-.services .icon-box {
+/* Servizi: si scaglionano i tre gruppi, non i nove servizi. Tre elementi
+   in movimento invece di nove, e la cascata chiude in 610ms invece di 930. */
+.service-group {
   animation: enter-rise 450ms var(--ease-out) both;
 }
 
-.services .col-lg-4:nth-child(1) .icon-box { animation-delay: 0ms; }
-.services .col-lg-4:nth-child(2) .icon-box { animation-delay: 60ms; }
-.services .col-lg-4:nth-child(3) .icon-box { animation-delay: 120ms; }
-.services .col-lg-4:nth-child(4) .icon-box { animation-delay: 180ms; }
-.services .col-lg-4:nth-child(5) .icon-box { animation-delay: 240ms; }
-.services .col-lg-4:nth-child(6) .icon-box { animation-delay: 300ms; }
-.services .col-lg-4:nth-child(7) .icon-box { animation-delay: 360ms; }
-.services .col-lg-4:nth-child(8) .icon-box { animation-delay: 420ms; }
-.services .col-lg-4:nth-child(9) .icon-box { animation-delay: 480ms; }
+.service-group:nth-of-type(2) { animation-delay: 80ms; }
+.service-group:nth-of-type(3) { animation-delay: 160ms; }
 
 /*--------------------------------------------------------------
 # Movimento ridotto
@@ -1171,7 +1067,7 @@ iframe:focus-visible {
 
   .enter,
   #hero .container,
-  .services .icon-box {
+  .service-group {
     animation: enter-fade 200ms var(--ease-out) both;
     animation-delay: 0ms !important;
   }
