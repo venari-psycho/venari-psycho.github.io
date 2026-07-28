@@ -356,7 +356,9 @@ h1, h2, h3, h4, h5, h6 {
      iniziale, cioè al viewport, che su mobile non coincide con la hero. */
   position: relative;
   min-height: 100vh;   /* fallback per i browser senza unità dinamiche */
-  min-height: 100dvh;  /* segue la barra del browser invece di sbordarci sotto */
+  min-height: 100svh;  /* viewport piccolo: la hero ci sta sempre per intero e
+                          resta ferma, invece di ridimensionarsi allo scorrere
+                          come farebbe con dvh */
   background-position: top right;
   background-size: cover;
   /* Mobile-first: la variante piccola pesa 19 KB contro i 722 KB dell'originale.
