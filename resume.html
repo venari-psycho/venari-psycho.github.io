@@ -24,8 +24,8 @@ layout: default
             <ul>
               <li>{{ site.data.contact.primary_address }}</li>
               <li>{{ site.data.contact.secondary_address }}</li>
-              <li>{{ site.data.contact.phone }}</li>
-              <li>{{ site.data.contact.email }}</li>
+              <li><a href="tel:{{ site.data.contact.phone | remove: ' ' }}">{{ site.data.contact.phone }}</a></li>
+              <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
               <li>P. IVA {{ site.data.contact.piva }}</li>
             </ul>
           </div>
@@ -40,7 +40,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name">Formazione Continua in Psicologia</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> online
+                {% include icon.html name="location-pin" %} online
               </div>
             </div>
             <div class="job-content">
@@ -62,7 +62,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name">Formazione Continua in Psicologia</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> online
+                {% include icon.html name="location-pin" %} online
               </div>
             </div>
             <div class="job-content">
@@ -82,11 +82,11 @@ layout: default
             <div class="job-header">
               <div class="job-center-name"> Istituto ReTe</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via delle Fornaci, 132 – 00165 Roma (RM)
+                {% include icon.html name="location-pin" %} Via delle Fornaci, 132 – 00165 Roma (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Supporto alla genitorialit&agrave;</p>
+              <p>{% include icon.html name="check-circled" %} Supporto alla genitorialit&agrave;</p>
               <ul>
                 <li>approfondimento delle conoscenze specialistiche sul supporto alla genitorialit&agrave;</li>
                 <li>acquisizione degli strumenti pratici di intervento per il parent training nel disturbo ossessivo compulsivo, nell'ADHD e nei disturbi del comportamento</li>
@@ -103,7 +103,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name"> Corso FAD, Formazione Continua in Psicologia</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> online 
+                {% include icon.html name="location-pin" %} online 
               </div>
             </div>
             <div class="job-content">
@@ -123,7 +123,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name"> Hotel Quirinale, Roma</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Nazionale, 7 - 00184 Roma RM (RM)
+                {% include icon.html name="location-pin" %} Via Nazionale, 7 - 00184 Roma RM (RM)
               </div>
             </div>
             <div class="job-content">
@@ -143,7 +143,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name"> Hotel Quirinale, Roma</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Nazionale, 7 - 00184 Roma RM (RM)
+                {% include icon.html name="location-pin" %} Via Nazionale, 7 - 00184 Roma RM (RM)
               </div>
             </div>
             <div class="job-content">
@@ -162,7 +162,7 @@ layout: default
             <div class="job-header">
               <div class="job-center-name">Format sas</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> online
+                {% include icon.html name="location-pin" %} online
               </div>
             </div>
             <div class="job-footer">
@@ -178,11 +178,11 @@ layout: default
               <div class="job-center-name">Istituto APC/SPC</div>
               <div class="job-center-description">Associazione di Psicologia Cognitiva e Scuola di Psicoterapia Cognitiva</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Viale Castro Pretorio, 116 - 00185 Roma (RM)
+                {% include icon.html name="location-pin" %} Viale Castro Pretorio, 116 - 00185 Roma (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Assessment, valutazione e inquadramento diagnostico</p>
+              <p>{% include icon.html name="check-circled" %} Assessment, valutazione e inquadramento diagnostico</p>
             </div>
           </div>
           <div class="resume-item">
@@ -192,11 +192,11 @@ layout: default
               <div class="job-center-name">Istituto Walden</div>
               <div class="job-center-description">Centro ABA-VB</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Vittorio Bachelet, 12 - 00185 Roma (RM)
+                {% include icon.html name="location-pin" %} Via Vittorio Bachelet, 12 - 00185 Roma (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Corso riconosciuto da AssoTABA - Associazione dei Tecnici ABA</p>
+              <p>{% include icon.html name="check-circled" %} Corso riconosciuto da AssoTABA - Associazione dei Tecnici ABA</p>
             </div>
           </div>
           <div class="resume-item">
@@ -206,7 +206,7 @@ layout: default
               <div class="job-center-name">La Tenda Onlus</div>
               <div class="job-center-description">Comunit&agrave; Terapeutica semi-residenziale</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via del Frantoio, 58 - 00159 Roma (RM)
+                {% include icon.html name="location-pin" %} Via del Frantoio, 58 - 00159 Roma (RM)
               </div>
             </div>
             <div class="job-footer">
@@ -221,7 +221,7 @@ layout: default
               <div class="job-center-name">Villa Elisa</div>
               <div class="job-center-description">Struttura Residenziale Terapeutico-Riabilitativa</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Tiburtina, 258 - 00131 Setteville (Roma)
+                {% include icon.html name="location-pin" %} Via Tiburtina, 258 - 00131 Setteville (Roma)
               </div>
             </div>
             <div class="job-footer">
@@ -239,11 +239,11 @@ layout: default
               <div class="job-center-name">Centro Clinico Marco Aurelio</div>
               <div class="job-center-description">Centro clinico per l'et&agrave; evolutiva</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Viale Castro Pretorio, 116 - 00185 Roma (RM)
+                {% include icon.html name="location-pin" %} Viale Castro Pretorio, 116 - 00185 Roma (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">ADHD</p>
@@ -258,11 +258,11 @@ layout: default
               <div class="job-center-name">Agenzia Vita Indipendente Onlus</div>
               <div class="job-center-description">Centro per la promozione dei diritti delle persone con disabilit&agrave;</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via degli Anemoni, 19 - 00172 Roma (RM)
+                {% include icon.html name="location-pin" %} Via degli Anemoni, 19 - 00172 Roma (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Disabilit&agrave;</p>
@@ -277,11 +277,11 @@ layout: default
               <div class="job-center-name">Logos Medical Center</div>
               <div class="job-center-description">Centro clinico di formazione, ricerca e riabilitazione</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via della Tenuta del Cavaliere, 1 c/o Centro Direzionale C.A.R. - 00012 Guidonia (RM)
+                {% include icon.html name="location-pin" %} Via della Tenuta del Cavaliere, 1 c/o Centro Direzionale C.A.R. - 00012 Guidonia (RM)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Psicopatologia</p>
@@ -299,11 +299,11 @@ layout: default
               <div class="job-center-name">Istituto San Giorgio</div>
               <div class="job-center-description">Centro per il trattamento dei disturbi del comportamento alimentare e obesit&agrave;</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via San Giorgio, 3 - 01038 Soriano nel Cimino (VT)
+                {% include icon.html name="location-pin" %} Via San Giorgio, 3 - 01038 Soriano nel Cimino (VT)
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Obesit&agrave;</p>
@@ -320,11 +320,11 @@ layout: default
               <div class="job-center-name">AttivaMente</div>
               <div class="job-center-description">Centro diagnosi e trattamento dei disturbi psicopatologici e del neurosviluppo</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Marche, 13/a - 00187 Roma
+                {% include icon.html name="location-pin" %} Via Marche, 13/a - 00187 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Spettro autistico</p>
@@ -341,11 +341,11 @@ layout: default
               <div class="job-center-name">Ania Cares</div>
               <div class="job-center-description">Pronto soccorso psicologico per le vittime di incidenti stradali e del Covid-19</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via di San Nicola da Tolentino, 72 - 00187 Roma
+                {% include icon.html name="location-pin" %} Via di San Nicola da Tolentino, 72 - 00187 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Assistenza psicologica, in collaborazione con l'Universit&agrave; "La Sapienza" di Roma e Polizia Stradale</p>
+              <p>{% include icon.html name="check-circled" %} Assistenza psicologica, in collaborazione con l'Universit&agrave; "La Sapienza" di Roma e Polizia Stradale</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Psicologia dell'emergenza</p>
@@ -360,11 +360,11 @@ layout: default
               <div class="job-center-name">Aba.co</div>
               <div class="job-center-description">Centro diagnosi e trattamento dei disturbi dello spettro autistico</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Viale Giorgio Morandi, 199 - 00155 Roma
+                {% include icon.html name="location-pin" %} Viale Giorgio Morandi, 199 - 00155 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Terapia ABA per soggetti nello spettro autistico</p>
+              <p>{% include icon.html name="check-circled" %} Terapia ABA per soggetti nello spettro autistico</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Spettro autistico</p>
@@ -379,11 +379,11 @@ layout: default
               <div class="job-center-name">UmbrellAutismo</div>
               <div class="job-center-description">Associazione ONLUS per la ricerca e il trattamento dell'Autismo</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Appia Antica, 203 - 00178 Roma
+                {% include icon.html name="location-pin" %} Via Appia Antica, 203 - 00178 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Stage teorico-pratico specifico per il trattamento dell'Autismo in et&agrave; evolutiva</p>
+              <p>{% include icon.html name="check-circled" %} Stage teorico-pratico specifico per il trattamento dell'Autismo in et&agrave; evolutiva</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Spettro autistico</p>
@@ -398,7 +398,7 @@ layout: default
               <div class="job-center-description">Corpo Italiano di Soccorso dell'Ordine di Malta</div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Volontariato per servizio psicologico di consulenza e di ascolto</p>
+              <p>{% include icon.html name="check-circled" %} Volontariato per servizio psicologico di consulenza e di ascolto</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Attivit&agrave; di prevenzione dei disturbi psichici</p>
@@ -412,11 +412,11 @@ layout: default
               <div class="job-center-name">ASL ROMA 6</div>
               <div class="job-center-description">Centro di Salute Mentale</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Enrico Fermi, 2 - 00044 Frascati
+                {% include icon.html name="location-pin" %} Via Enrico Fermi, 2 - 00044 Frascati
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Consulenza e valutazione clinica</p>
+              <p>{% include icon.html name="check-circled" %} Consulenza e valutazione clinica</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Attivit&agrave; di prevenzione dei disturbi psichici</p>
@@ -429,11 +429,11 @@ layout: default
             <div class="job-header">
               <div class="job-center-name">Universit&agrave; degli Studi "Guglielmo Marconi"</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Plinio, 44 - 00193 Roma
+                {% include icon.html name="location-pin" %} Via Plinio, 44 - 00193 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span>
+              <p>{% include icon.html name="check-circled" %}
                 Attivit&agrave; di orientamento individuale e supporto alle sessioni di esame
               </p>
             </div>
@@ -447,11 +447,11 @@ layout: default
             <div class="job-header">
               <div class="job-center-name">Cooperativa "Le mille e una notte"</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> Via Val Brembana, 1 - 00141 Roma
+                {% include icon.html name="location-pin" %} Via Val Brembana, 1 - 00141 Roma
               </div>
             </div>
             <div class="job-content">
-              <p><span class="icofont-check-circled"></span> Aree di intervento: SISMIF, SAISH, AEC</p>
+              <p>{% include icon.html name="check-circled" %} Aree di intervento: SISMIF, SAISH, AEC</p>
             </div>
             <div class="job-footer">
               <p class="badge badge-pill badge-info">Minori</p>
@@ -465,7 +465,7 @@ layout: default
               <div class="job-center-name">SPAZIO CU.BE.</div>
               <div class="job-center-description">Studio di Psicoterapia</div>
               <div class="job-center-location">
-                <span class="icofont-location-pin"></span> {{ site.data.contact.primary_address }}
+                {% include icon.html name="location-pin" %} {{ site.data.contact.primary_address }}
               </div>
             </div>
             <div class="job-footer">
@@ -479,4 +479,15 @@ layout: default
     </div>
   </section><!-- End Resume Section -->
 
+<div class="container mt-5 mb-5 text-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="resume-2" aria-label="Resume, parte 2">
+                    <span aria-hidden="true">&laquo;</span> Resume, parte 2
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
 </main><!-- End #main -->

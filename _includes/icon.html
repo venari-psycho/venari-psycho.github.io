@@ -1,0 +1,42 @@
+{%- comment -%}
+Icone SVG inline: sostituiscono IcoFont (537 KB) e Boxicons (90 KB), che venivano
+scaricati interi per una dozzina di glifi.
+
+Uso:  {% include icon.html name="phone" %}
+      {% include icon.html name="phone" label="Telefono" %}   <- se l'icona porta significato
+
+Senza `label` l'icona è decorativa e viene nascosta agli screen reader.
+Il wrapper <i> è voluto: le regole esistenti in style.css (.contact .info i,
+.about .content ul i, .back-to-top i) selezionano l'elemento <i>.
+{%- endcomment -%}
+{%- assign n = include.name -%}
+<i class="svg-icon svg-icon-{{ n }}"{% if include.label %} role="img" aria-label="{{ include.label }}"{% else %} aria-hidden="true"{% endif %}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+{%- case n -%}
+{%- when "location-pin" or "google-map" -%}
+<path d="M12 21s6.5-6.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 14.8 12 21 12 21z"/><circle cx="12" cy="10.4" r="2.4"/>
+{%- when "check-circled" -%}
+<circle cx="12" cy="12" r="9"/><path d="m8 12.4 2.6 2.6L16 9.6"/>
+{%- when "rounded-right" -%}
+<circle cx="12" cy="12" r="9"/><path d="m10.5 8.4 4 3.6-4 3.6"/>
+{%- when "navigation-menu" -%}
+<path d="M4 7h16M4 12h16M4 17h16"/>
+{%- when "close" -%}
+<path d="m6 6 12 12M18 6 6 18"/>
+{%- when "phone" -%}
+<path d="M6.4 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5C10.5 19.4 4.6 13.5 4 5.1a1.5 1.5 0 0 1 1.5-1.6z"/>
+{%- when "envelope" -%}
+<rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 7 8.4 6 8.4-6"/>
+{%- when "ui-calendar" -%}
+<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3.2v3.6M16 3.2v3.6"/>
+{%- when "contact-add" -%}
+<rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="9" cy="10.8" r="2.2"/><path d="M5.6 16.4c.6-1.6 1.9-2.4 3.4-2.4s2.8.8 3.4 2.4"/><path d="M15.4 11h4.2M17.5 8.9v4.2"/>
+{%- when "bag-alt" -%}
+<path d="M4.6 8h14.8l-1 11.5H5.6z"/><path d="M9 8V6.6a3 3 0 0 1 6 0V8"/>
+{%- when "code-alt" -%}
+<path d="m9 8-4.5 4L9 16M15 8l4.5 4L15 16"/>
+{%- when "ui-love" -%}
+<path d="M12 19.5 4.8 12.6a4.4 4.4 0 0 1 0-6.3 4.5 4.5 0 0 1 6.3 0l.9.9.9-.9a4.5 4.5 0 0 1 6.3 0 4.4 4.4 0 0 1 0 6.3z"/>
+{%- when "arrow-up" -%}
+<path d="M12 19V5.5M6 11.5 12 5.5l6 6"/>
+{%- endcase -%}
+</svg></i>
