@@ -12,7 +12,7 @@ layout: default
     <div class="container">
 
       <div class="section-title">
-        <h2>Contatti</h2>
+        <h1>Contatti</h1>
       </div>
 
       <!-- Google Map -->
@@ -33,25 +33,25 @@ layout: default
 
             <div class="address">
               {% include icon.html name="google-map" %}
-              <h4>Indirizzo:</h4>
+              <h2>Indirizzo:</h2>
               <p>{{ site.data.contact.primary_address }}</p>
             </div>
 
             <div class="address secondary-address">
               {% include icon.html name="google-map" %}
-              <h4>Indirizzo:</h4>
+              <h2>Indirizzo:</h2>
               <p>{{ site.data.contact.secondary_address }}</p>
             </div>
 
             <div class="email">
               {% include icon.html name="envelope" %}
-              <h4>Email:</h4>
+              <h2>Email:</h2>
               <p><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></p>
             </div>
 
             <div class="phone">
               {% include icon.html name="phone" %}
-              <h4>Telefono:</h4>
+              <h2>Telefono:</h2>
               <p><a href="tel:{{ site.data.contact.phone | remove: ' ' }}">{{ site.data.contact.phone }}</a></p>
             </div>
           </div>
@@ -61,7 +61,7 @@ layout: default
           <div class="info">
             <div class="receive-hour">
               {% include icon.html name="ui-calendar" %}
-              <h4>Orari di ricevimento</h4>
+              <h2>Orari di ricevimento</h2>
             </div>
 
             <table class="table opening-hours-table">
@@ -104,7 +104,7 @@ layout: default
           <div class="info">
             <div class="address pb-4">
               {% include icon.html name="contact-add" %}
-              <h4>vCard</h4>
+              <h2>vCard</h2>
               <p>Inquadra con la fotocamera del tuo cellulare il codice qui sotto per aggiungermi direttamente alla tua rubrica.</p>
             </div>
           </div>

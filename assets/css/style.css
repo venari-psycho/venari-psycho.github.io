@@ -388,29 +388,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* PANIK WIP FONT REFACTOR */
-#hero h1 {
+.hero-name {
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: var(--ink);
-
+  text-align: center;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
+  font-size: 48px;
   font-weight: 500;
   font-style: normal;
+  line-height: 56px;
+  color: var(--ink);
+}
+
+/* Il titolo onorifico sta dentro l'h1 perché fa parte del nome,
+   ma va a capo e resta della dimensione della qualifica. */
+.hero-honorific {
+  display: block;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #6f6f6f;
 }
 
 /* PANIK WIP FONT REFACTOR */
-#hero h2 {
-  color: #6f6f6f;
+.hero-role {
   margin: 10px 0 0 0;
-  font-size: 22px;
-
+  text-align: center;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
+  font-size: 22px;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.7;
+  color: #6f6f6f;
 }
 
 #hero .btn-pill {
@@ -433,13 +442,16 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
   }
-  #hero h1 {
+  .hero-name {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  .hero-honorific,
+  .hero-role {
     font-size: 18px;
-    line-height: 24px;
+  }
+  .hero-role {
+    line-height: 1.6;
   }
 }
 
@@ -521,6 +533,7 @@ section.cookie-policy-section {
 }
 
 /* PANIK WIP FONT REFACTOR */
+.section-title h1,
 .section-title h2 {
   font-family: "Playfair Display", serif;
   font-size: 32px;
@@ -531,6 +544,7 @@ section.cookie-policy-section {
   position: relative;
 }
 
+.section-title h1::after,
 .section-title h2::after {
   content: '';
   position: absolute;
@@ -666,7 +680,7 @@ section.cookie-policy-section {
 }
 
 /* PANIK WIP FONT REFACTOR */
-.resume .resume-item h4 {
+.resume .resume-item h3 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -675,7 +689,7 @@ section.cookie-policy-section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.resume .resume-item h4 {
   font-size: 16px;
   background: var(--brand-surface);
   padding: 5px 15px;
@@ -782,7 +796,7 @@ section.cookie-policy-section {
   gap: 30px 40px;
 }
 
-.service h4 {
+.service h3 {
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -793,7 +807,7 @@ section.cookie-policy-section {
   margin: 0 0 8px 0;
 }
 
-.service h4 .svg-icon {
+.service h3 .svg-icon {
   flex: none;
   font-size: 20px;
   color: var(--brand-ink);
@@ -845,7 +859,7 @@ section.cookie-policy-section {
   transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out);
 }
 
-.contact .info h4 {
+.contact .info h2 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
@@ -890,7 +904,7 @@ section.cookie-policy-section {
   text-align: center;
 }
 
-#footer h5 {
+#footer h2 {
   font-family: "Playfair Display", serif;
   font-size: 1.3em;
 }
