@@ -904,7 +904,10 @@ section.cookie-policy-section {
   background: var(--surface-alt);
   padding: 30px 0;
   color: var(--ink);
-  font-size: 16px;
+  /* Il footer è testo di servizio: sta sotto la misura del corpo.
+     La striscia in fondo scende ancora di un gradino, così la
+     gerarchia continua a scendere invece di invertirsi. */
+  font-size: 13px;
   text-align: center;
 }
 
@@ -917,9 +920,12 @@ section.cookie-policy-section {
   background: var(--surface-strip);
 }
 
+.sub-footer-strip {
+  font-size: 12px;
+}
+
 .sub-footer-strip .credits {
   padding-top: 5px;
-  font-size: 0.85em;
 }
 
 .sub-footer-strip .credits a {
@@ -927,7 +933,7 @@ section.cookie-policy-section {
 }
 
 .sub-footer-strip .copyright {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #notfound {
