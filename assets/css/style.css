@@ -969,7 +969,10 @@ iframe:focus-visible {
 }
 
 .skip-link {
-  position: absolute;
+  /* fixed e non absolute: senza antenati posizionati, absolute lo ancorava
+     al blocco contenitore iniziale, cioè all'origine del documento, e il
+     link compariva solo con la pagina in cima. */
+  position: fixed;
   left: 50%;
   top: 0;
   transform: translate(-50%, -110%);

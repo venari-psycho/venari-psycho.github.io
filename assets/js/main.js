@@ -87,9 +87,20 @@
       'aria-hidden': 'true'
     });
     $('body').append($mobile_nav);
-    $('body').prepend(
+
+    // Il pulsante va dopo lo skip link, non in testa al body: lo skip link
+    // deve restare il primo elemento che si incontra premendo Tab.
+    var $toggle = $(
       '<button type="button" class="mobile-nav-toggle d-lg-none" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="mobile-nav">' + ICON_MENU + ICON_CLOSE + '</button>'
     );
+    var $skip = $('.skip-link');
+    if ($skip.length) {
+      $toggle.insertAfter($skip);
+    } else {
+      // il layout modale della cookie policy non ha lo skip link
+      $('body').prepend($toggle);
+    }
+
     $('body').append('<div class="mobile-nav-overly"></div>');
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
