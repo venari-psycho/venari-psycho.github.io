@@ -156,13 +156,4 @@
     return false;
   });
 
-  // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("data-progress") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
-
 })(jQuery);
