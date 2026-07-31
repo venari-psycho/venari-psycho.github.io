@@ -10,12 +10,14 @@
 
 ## Important Notes
 - Static site: all pages generated at build time, no dynamic backend
-- Published via GitHub Pages: push to main branch triggers automatic deploy
+- Published via GitHub Pages: push to the `master` branch triggers automatic deploy
+  (`master` is the default branch; any doc saying `main` is stale)
 - `_site/` directory is excluded from Git (see .gitignore)
 - Configuration in `_config.yml` (url, baseurl, locale: 'it_IT', exclusions, plugins)
 - Content structure:
   - Pages: root HTML files (index.html, about.html, etc.) with YAML front matter
-  - Layout: `_layouts/default.html` used by all pages
+  - Layouts: `_layouts/default.html` for every page except `cookie-policy.html`,
+    which uses the chrome-free `_layouts/default-modal.html`
   - Partials: `_includes/` (header, footer, analytics, etc.)
   - Data: `_data/` YAML files (contact.yml, social.yaml, etc.)
   - Assets: `assets/` (css, js, img, svg, vendor)

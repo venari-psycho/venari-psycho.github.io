@@ -4,16 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Jekyll site for Dott.ssa Arianna Ventrelli (psychologist/psychotherapist, Rome), served by GitHub Pages at ariannaventrelli.it. Content is in Italian; the site is fully static with no backend and no test suite. Styling comes from the BootstrapMade "Kelly" template — `assets/vendor/` and `assets/css/style.css` are template code and are normally left alone.
+Jekyll site for Dott.ssa Arianna Ventrelli (psychologist/psychotherapist, Rome), served by GitHub Pages at ariannaventrelli.it. Content is in Italian; the site is fully static with no backend and no test suite.
+
+The site started from the BootstrapMade "Kelly" template, but `assets/css/style.css` has since been rewritten around a `:root` token block (colour, z-index and easing scales) and its own components — it is project code now, not template code, and is the right place to edit. `assets/vendor/` has been pruned to what is actually loaded: Bootstrap's CSS for the grid, jQuery, and jQuery Easing.
 
 ## Commands
 
 ```bash
-bundle install
-bundle exec jekyll serve   # http://localhost:4000, watch mode
-bundle exec jekyll build   # -> _site/ (gitignored)
-
-# Production-equivalent build (see "Environment gating" below)
+# Production-equivalent build. Analytics, GTM and the cookie banner are gated
+# on this (see "Environment gating"), so a plain serve renders none of them.
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
@@ -39,5 +38,3 @@ No CI workflows. GitHub Pages builds and deploys automatically on push to **`mas
 **`_data/` is the single source of truth for facts that repeat across pages**: `contact.yml` (addresses, email, phone, albo number, P.IVA), `social.yaml`, `google.yml` (GA/GTM ids), `iubenda.yml` (site + policy ids), `version.yml`. Edit the YAML, not the HTML — contact details appear in the footer, contact page, and structured metadata.
 
 **Versioning convention**: `_data/version.yml` holds `release: vX.Y.Z`, rendered in `_includes/sub-footer.html`. Git history shows it bumped as part of shipping user-visible changes ("Bump release version in _data/version.yml").
-
-`av-qr-code.py` is a standalone script, excluded from the build via `_config.yml`.
