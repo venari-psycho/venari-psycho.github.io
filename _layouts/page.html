@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<!-- Pagine scritte in markdown. Il markdown non può produrre da sé main,
+     section e container, senza i quali il contenuto esce dal contenitore
+     e finisce sotto l'header fisso: questo layout li fornisce. Il titolo
+     arriva dal front matter e passa per .section-title, la stessa classe
+     usata da tutte le altre pagine. -->
+<main id="main" class="enter">
+
+  <section class="page">
+    <div class="container">
+
+      <div class="section-title">
+        <h1>{{ page.heading | default: page.title }}</h1>
+      </div>
+
+      <div class="page-prose">
+        {{ content }}
+      </div>
+
+    </div>
+  </section>
+
+</main><!-- End #main -->

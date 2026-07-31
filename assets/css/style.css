@@ -842,6 +842,66 @@ section.cookie-policy-section {
 }
 
 /*--------------------------------------------------------------
+# Pagine in prosa
+# Il sito non ha regole per h2 / p / ul liberi: è tutto scritto per
+# componenti. Queste servono alle pagine scritte in markdown, che
+# passano dal layout `page`.
+--------------------------------------------------------------*/
+.page-prose {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+
+.page-prose h2 {
+  /* Serif fino al livello di sezione, come nel resto del sito. */
+  font-family: "Playfair Display", serif;
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 600;
+  color: var(--brand-ink);
+  margin: 45px 0 15px;
+}
+
+.page-prose > :first-child {
+  margin-top: 0;
+}
+
+.page-prose h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 30px 0 10px;
+}
+
+.page-prose p,
+.page-prose li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-body);
+}
+
+.page-prose p {
+  margin: 0 0 15px;
+}
+
+.page-prose ul {
+  margin: 0 0 15px;
+  padding-left: 20px;
+}
+
+.page-prose li {
+  margin-bottom: 6px;
+}
+
+.page-prose code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface-muted);
+  font-size: 0.9em;
+  color: var(--ink);
+}
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
