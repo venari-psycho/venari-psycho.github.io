@@ -1,3 +1,9 @@
+---
+title: Crediti - Dott.ssa Arianna Ventrelli
+permalink: credits
+layout: default
+---
+
 ## Crediti
 
 ### Template

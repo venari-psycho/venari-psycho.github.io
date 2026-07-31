@@ -1,7 +1,10 @@
 url: 'https://ariannaventrelli.it'
 baseurl: ''
 locale: 'it_IT'
-exclude: ['Readme.txt', 'av-qr-code.py', 'CLAUDE.md', 'AGENTS.md']
+# Documentazione del repository: non fa parte del sito.
+# credits.md non è qui perché alimenta la pagina /credits: ha un front matter,
+# quindi Jekyll la rende come pagina invece di copiarne il markup grezzo.
+exclude: ['Readme.txt', 'av-qr-code.py', 'CLAUDE.md', 'AGENTS.md', 'README.md']
 
 title: 'Dott.ssa Arianna Ventrelli'
 description: 'Dott.ssa Arianna Ventrelli psicologa psicoterapeuta cognitivo-comportamentale, EMDR e terapista ABA, a Roma, Centocelle, Tuscolano, si occupa di disturbi alimentari, anoressia, bulimia, ansia, paura, sostegno alla genitorialit&agrave;, rapporti genitori figli, disturbi psicologici e disagi familiari, psicoterapia per l''individuo e di coppia, consulenza rapporto genitori figli.'
